@@ -1,0 +1,38 @@
+syntax: glob
+
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+obj/
+UnityGenerated/
+library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.orig
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ============ #
+# Misc Ignores #
+# ============ #
