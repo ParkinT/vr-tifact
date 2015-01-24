@@ -1,0 +1,21 @@
+Using Hermite Spline Controller
+
+Attach SplineController to object that will be moving (may get errors initially, this is fine)
+
+Create an empty object as a parent for all spline nodes
+
+Populate empty object with empty children, each of which represent a node along the spline. Must be alphabetically ordered in the hierarchy (recommend Node001, Node002, Node 003, etc…)
+
+disable AutoStart and AutoClose on your SplineController
+
+to begin moving the object along the spline send the message (or call the function) “Play” to the SplineController object
+
+to receive a message on animation completion, set a callback function to the splineControllers onComplete, ex below
+
+public void myFunc() {
+…
+}
+
+splineController.onComplete = myFunc;
+
+myFunc will be called on completion.
