@@ -26,7 +26,6 @@ public class MaterialFader : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.bShouldFadeOut = false;
-		this.FadeOut ();
 
 		this.materialsToFade = this.objectRenderers.ConvertAll (r => r.material);
 		this.colorsOfMaterial = this.materialsToFade.ConvertAll(m => m.color);
