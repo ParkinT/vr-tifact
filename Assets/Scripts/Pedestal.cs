@@ -35,4 +35,21 @@ public class Pedestal : MonoBehaviour {
 			toReveal[i].Play();
 		}
 	}
+
+	void OnTriggerEnter(Collider other) {
+		switch (other.name) {
+		case "earth":
+			this.RunReveal(0);
+			break;
+		case "water":
+			this.RunReveal(1);
+			break;
+		case "fire":
+			this.RunReveal(2);
+			break;
+		case "wind":
+			this.RunReveal(3);
+			break;
+		}
+	}
 }
