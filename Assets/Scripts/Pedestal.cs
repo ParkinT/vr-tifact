@@ -37,6 +37,7 @@ public class Pedestal : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
+		Debug.Log (other.name);
 		switch (other.name) {
 		case "earth":
 			this.RunReveal(0);

@@ -27,7 +27,7 @@ public class Reveal : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public virtual void Update () {
 		if (!is_active) //not yet active; ignore
 			return;
 		if (transform.position == FinalLocation)  //no more movement
@@ -60,7 +60,7 @@ public class Reveal : MonoBehaviour {
 		return new Vector3(); //dummy - remove before flight
 	}
 
-	public void Play() {
+	public virtual void Play() {
 		this.is_active = true;
 	}
 }

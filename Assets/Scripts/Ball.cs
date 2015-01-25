@@ -10,23 +10,21 @@ public class Ball : MonoBehaviour
     private const float MOVEMENT_SPEED = 0.5f;
     float xPos, yPos, zPos = 0;
 
+	bool bShouldUpdate = false;
+
 	// Use this for initialization
 	void Start () 
     {
-        pedestal = GameObject.Find("Pedestal");
-        targetLocation = new Vector3(pedestal.gameObject.transform.position.x, 
-            pedestal.gameObject.transform.position.y + (pedestal.renderer.bounds.size.y / 2) + 
-            (renderer.bounds.size.y / 2), pedestal.gameObject.transform.position.z);
+		pedestal = GameObject.Find("BallSitPos");
+		targetLocation = pedestal.transform.position;
+//        targetLocation = new Vector3(pedestal.gameObject.transform.position.x, 
+//            pedestal.gameObject.transform.position.y + (pedestal.renderer.bounds.size.y / 2) + 
+//            (renderer.bounds.size.y / 2), pedestal.gameObject.transform.position.z);
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        if (/*gameObject.renderer.bounds.Intersects(pedestal.renderer.bounds) && */!ballAnimationStarted)
-        {
-            ballAnimationStarted = true;
-            PlaceBall();
-        }
 	}
 
     IEnumerator AnimatePlacement ()
@@ -51,4 +49,14 @@ public class Ball : MonoBehaviour
         gameObject.rigidbody.isKinematic = true;
         StartCoroutine(AnimatePlacement());
     }
+
+	public void OnTriggerEnter(Collider other) {
+		if (other.tag == "gem") {
+			other.transform.parent = this.transform;
+			other.transform.localPosition = Vector3.zero;
+		}
+		if (other.tag == "pedestal") {
+			PlaceBall();
+		}
+	}
 }

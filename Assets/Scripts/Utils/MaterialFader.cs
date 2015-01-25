@@ -7,7 +7,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class MaterialFader : MonoBehaviour {
+public class MaterialFader : Reveal {
 
 	[SerializeField]
 	private List<Renderer> objectRenderers;
@@ -19,25 +19,23 @@ public class MaterialFader : MonoBehaviour {
 
 	private float timeFadeElapsed;
 
-	private bool bShouldFadeOut;
-
 	private List<Color> colorsOfMaterial;
 
 	// Use this for initialization
 	void Start () {
-		this.bShouldFadeOut = false;
+		this.is_active = false;
 
 		this.materialsToFade = this.objectRenderers.ConvertAll (r => r.material);
 		this.colorsOfMaterial = this.materialsToFade.ConvertAll(m => m.color);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (this.bShouldFadeOut) {
+	public override void Update () {
+		if (this.is_active) {
 			float percentComplete = this.timeFadeElapsed / this.timeForFadeEffect;
 			if(percentComplete >= 1.0f) {
 				this.SetAlphas(0);
-				this.bShouldFadeOut = false;
+				this.is_active = false;
 				this.gameObject.SetActive(false);
 				return;
 			}
@@ -57,8 +55,9 @@ public class MaterialFader : MonoBehaviour {
 		}
 	}
 
-	public void FadeOut() {
+	public override void Play ()
+	{
 		this.timeFadeElapsed = 0;
-		this.bShouldFadeOut = true;
+		this.is_active = true;
 	}
 }
