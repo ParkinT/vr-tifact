@@ -25,7 +25,7 @@ public class ThalmicHub : MonoBehaviour
     // Application identifiers must have three or more segments. For example, if a company's domain is example.com and
     // the application is named hello-world, one could use "com.example.hello-world" as a valid application identifier.
     // applicationIdentifier can an empty string.
-    public string applicationIdentifier = "com.example.myo-unity";
+    public string applicationIdentifier = "com.burnoutgames.myo-unity";
 
     // If set to None, pose events are always sent. If set to Standard, pose events are not sent while a Myo is locked.
     public LockingPolicy lockingPolicy;

@@ -8336,7 +8336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6947ca4e1434ea7804b87a519be7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myo: {fileID: 0}
+  myo: {fileID: 924954215}
 --- !u!54 &410829466
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21893,7 +21893,6 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
-  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &940742884
 Transform:
@@ -34134,7 +34133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0b7b6ac98ab4b35b65cd9fa62c457f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationIdentifier: com.example.myo-unity
+  applicationIdentifier: com.burnoutgames.myo-unity
   lockingPolicy: 0
 --- !u!1001 &1426742487
 Prefab:

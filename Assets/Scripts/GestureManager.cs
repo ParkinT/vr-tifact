@@ -70,8 +70,7 @@ public class GestureManager : MonoBehaviour
                     pickupObject(GameObject.Find("Ball"));
                 }
             }
-
-            if (thalmicMyo.pose == Pose.DoubleTap)
+			if (thalmicMyo.pose == Pose.DoubleTap)
             {
                 updateReference = true;
                 ExtendUnlockAndNotifyUserAction(thalmicMyo);
@@ -81,7 +80,8 @@ public class GestureManager : MonoBehaviour
 
         if (isHoldingObj && _heldObject != null)
         {
-            _heldObject.transform.position = this.gameObject.transform.position;
+			Vector3 upVectorAdjustment = new Vector3(0, 1.7f, 0);
+			_heldObject.transform.position = (this.gameObject.transform.position + upVectorAdjustment);
         }
 
         // Update references. This anchors the joint on-screen such that it faces forward away
@@ -131,9 +131,14 @@ public class GestureManager : MonoBehaviour
         }
     }
 
+
     void pickupObject(GameObject targetObject)
     {
-        targetObject.transform.position = this.gameObject.transform.position;
+		Vector3 upVectorAdjustment = new Vector3(0, 30, 0);
+		targetObject.transform.position = (this.gameObject.transform.position + upVectorAdjustment);
+		Debug.Log(this.gameObject.transform.position); Debug.Log(targetObject.transform.position);
+		targetObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);;
+
         isHoldingObj = true;
 
         _heldObject = targetObject;
@@ -146,12 +151,14 @@ public class GestureManager : MonoBehaviour
     {
         isHoldingObj = false;
 
-        //_heldObject.rigidbody.isKinematic = false;
+        _heldObject.rigidbody.isKinematic = false;
+		_heldObject.transform.localScale = Vector3.one;
         _heldObject = null;
 
         print("Object dropped");
 
     }
+
 
     // Compute the angle of rotation clockwise about the forward axis relative to the provided zero roll direction.
     // As the armband is rotated about the forward axis this value will change, regardless of which way the

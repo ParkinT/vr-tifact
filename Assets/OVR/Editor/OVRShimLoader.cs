@@ -69,9 +69,9 @@ class OVRShimLoader
 			useExclusiveModeD3D11 = false;
 		}
 
-		PlayerSettings.d3d11ForceExclusiveMode = useExclusiveModeD3D11;
-		PlayerSettings.d3d9FullscreenMode = D3D9FullscreenMode.ExclusiveMode;
-		PlayerSettings.visibleInBackground = true;
+//		PlayerSettings.d3d11ForceExclusiveMode = useExclusiveModeD3D11;
+//		PlayerSettings.d3d9FullscreenMode = D3D9FullscreenMode.ExclusiveMode;
+//		PlayerSettings.visibleInBackground = true;
 #endif
 	}
 
