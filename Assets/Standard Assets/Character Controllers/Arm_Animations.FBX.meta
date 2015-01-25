@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: ade0e25adcc338546b21b9fc089b1f77
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arm
+    100002: Arm 1
+    100004: //RootNode
+    100006: Forearm
+    100008: Hand
+    100010: Index1
+    100012: Index2
+    100014: Index3
+    100016: Index4
+    100018: IndexNub
+    100020: Middle1
+    100022: Middle2
+    100024: Middle3
+    100026: Middle4
+    100028: MiddleNub
+    100030: Pinky1
+    100032: Pinky2
+    100034: Pinky3
+    100036: Pinky4
+    100038: PinkyNub
+    100040: Ring1
+    100042: Ring2
+    100044: Ring3
+    100046: Ring4
+    100048: RingNub
+    100050: Thumb_1
+    100052: Thumb_2
+    100054: Thumb_3
+    100056: Thumb_Nub
+    400000: Arm
+    400002: Arm 1
+    400004: //RootNode
+    400006: Forearm
+    400008: Hand
+    400010: Index1
+    400012: Index2
+    400014: Index3
+    400016: Index4
+    400018: IndexNub
+    400020: Middle1
+    400022: Middle2
+    400024: Middle3
+    400026: Middle4
+    400028: MiddleNub
+    400030: Pinky1
+    400032: Pinky2
+    400034: Pinky3
+    400036: Pinky4
+    400038: PinkyNub
+    400040: Ring1
+    400042: Ring2
+    400044: Ring3
+    400046: Ring4
+    400048: RingNub
+    400050: Thumb_1
+    400052: Thumb_2
+    400054: Thumb_3
+    400056: Thumb_Nub
+    4300000: Arm
+    7400000: Arm_Idle
+    7400002: Arm_Grabbing
+    7400004: Arm_Grab_Frozen
+    7400006: Arm_Ungrabbing
+    7400008: Arm_Holding_Idle
+    7400010: Test_Cycle
+    7400012: Take 001
+    9500000: //RootNode
+    13700000: Arm
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Arm_Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm 1
+        weight: 1
+      - path: Arm 1/Forearm
+        weight: 1
+      - path: Arm 1/Forearm/Hand
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4/IndexNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4/MiddleNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4/PinkyNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4/RingNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3/Thumb_Nub
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Arm_Grabbing
+      takeName: Take 001
+      firstFrame: 220
+      lastFrame: 320
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm 1
+        weight: 1
+      - path: Arm 1/Forearm
+        weight: 1
+      - path: Arm 1/Forearm/Hand
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4/IndexNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4/MiddleNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4/PinkyNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4/RingNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3/Thumb_Nub
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Arm_Grab_Frozen
+      takeName: Take 001
+      firstFrame: 320
+      lastFrame: 340
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm 1
+        weight: 1
+      - path: Arm 1/Forearm
+        weight: 1
+      - path: Arm 1/Forearm/Hand
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4/IndexNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4/MiddleNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4/PinkyNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4/RingNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3/Thumb_Nub
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Arm_Ungrabbing
+      takeName: Take 001
+      firstFrame: 340
+      lastFrame: 420
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm 1
+        weight: 1
+      - path: Arm 1/Forearm
+        weight: 1
+      - path: Arm 1/Forearm/Hand
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4/IndexNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4/MiddleNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4/PinkyNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4/RingNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3/Thumb_Nub
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Arm_Holding_Idle
+      takeName: Take 001
+      firstFrame: 440
+      lastFrame: 640
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm 1
+        weight: 1
+      - path: Arm 1/Forearm
+        weight: 1
+      - path: Arm 1/Forearm/Hand
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4/IndexNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4/MiddleNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4/PinkyNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4/RingNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3/Thumb_Nub
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Test_Cycle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 640
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm 1
+        weight: 1
+      - path: Arm 1/Forearm
+        weight: 1
+      - path: Arm 1/Forearm/Hand
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4/IndexNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4/MiddleNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4/PinkyNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4/RingNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3/Thumb_Nub
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 640
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm
+        weight: 1
+      - path: Arm 1
+        weight: 1
+      - path: Arm 1/Forearm
+        weight: 1
+      - path: Arm 1/Forearm/Hand
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Index1/Index2/Index3/Index4/IndexNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Middle1/Middle2/Middle3/Middle4/MiddleNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Pinky1/Pinky2/Pinky3/Pinky4/PinkyNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Ring1/Ring2/Ring3/Ring4/RingNub
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3
+        weight: 1
+      - path: Arm 1/Forearm/Hand/Thumb_1/Thumb_2/Thumb_3/Thumb_Nub
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0254599992
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
