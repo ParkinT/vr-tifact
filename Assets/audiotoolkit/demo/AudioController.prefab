@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11406026}
   m_Layer: 0
   m_Name: AudioController
   m_TagString: GUI
@@ -34,7 +34,10 @@ Transform:
 --- !u!1002 &400001
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400000
+--- !u!1002 &11400001
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!114 &11406026
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,16 +51,12 @@ MonoBehaviour:
   AudioObjectPrefab: {fileID: 100000, guid: 0c1c735ac5b98ad428f564386ebb50c9, type: 2}
   UsePooledAudioObjects: 1
   PlayWithZeroVolume: 0
-  musicCrossFadeTime: .5
+  musicCrossFadeTime: 0
   AudioCategories:
-  - Name: Music
-    AudioObjectPrefab: {fileID: 100000, guid: 1d97530a48ed34f12be586f3db4a9e97, type: 2}
-    AudioItems: []
-    _volume: 1
   - Name: SFX
-    AudioObjectPrefab: {fileID: 0}
+    AudioObjectPrefab: {fileID: 100000, guid: 0c1c735ac5b98ad428f564386ebb50c9, type: 2}
     AudioItems:
-    - Name: mouse over
+    - Name: BallPickUp
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -69,7 +68,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 0903f18cfd44442a890bf9bb73682eff, type: 3}
+        Clip: {fileID: 8300000, guid: ce5135bb14d7c4fbf89998a9969167c4, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -82,7 +81,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: New Alert Message
+    - Name: BallPlaceDown
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -94,7 +93,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 160fd234dbd4d4e0fae41c09a9bd64f0, type: 3}
+        Clip: {fileID: 8300000, guid: 18d32c90155154b6e8b522f87a8e1389, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -107,111 +106,11 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Menu Selection
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 749b8aba1e63d4b5397caa3ec5f44664, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Radio Crackle
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 9ac6e258e69814a9a8be63b8606d37b8, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: UI blurp
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 5469d7e3696c5445787579bc39940644, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 2
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: back button
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 051a7f1c39df6492cbb3e5b22f42e99b, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: spacehum
+    - Name: Footsteps
       Loop: 1
       DestroyOnLoad: 1
       Volume: 1
-      SubItemPickMode: 2
+      SubItemPickMode: 3
       MinTimeBetweenPlayCalls: .100000001
       MaxInstanceCount: 0
       Delay: 0
@@ -219,7 +118,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: aa61d8a59d7f34b4380a1f3035dd2ca1, type: 3}
+        Clip: {fileID: 8300000, guid: a7d40b42c34b74304853944afeeca65f, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -232,7 +131,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Action unavailable
+    - Name: FireBurning
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -244,7 +143,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 75789d6852a6f4ad19996d3605ef4743, type: 3}
+        Clip: {fileID: 8300000, guid: cd65975e8c80047ed93379730a99488c, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -257,7 +156,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: ship travel
+    - Name: BuildingsRumble
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -269,7 +168,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 9f8a1ffb6928840479e8eb8fdb821701, type: 3}
+        Clip: {fileID: 8300000, guid: f4d0ad5b87271439595aca447d0692a5, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -282,7 +181,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Build Convoy
+    - Name: WaterSitting
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -294,7 +193,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 4eec2d5dab15c45269868d04f7657ce4, type: 3}
+        Clip: {fileID: 8300000, guid: 19adbaa969ba74b2082a68a3e5d6aa6d, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -307,7 +206,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: ship travel2
+    - Name: SlotPlacement
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -319,7 +218,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: cfb70a752c4094b139e7cc8d96331e52, type: 3}
+        Clip: {fileID: 8300000, guid: 15efc4be25c564947a1a5666fb81e9f7, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -332,7 +231,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: UI Bluurp
+    - Name: StoneGrinding
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -344,7 +243,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: ee1b6857cdcbe406485bec4cf9abce48, type: 3}
+        Clip: {fileID: 8300000, guid: 98dd84066adc043158fddb3c4fa0c912, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -357,7 +256,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Main menu button
+    - Name: GlowingBall
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -369,7 +268,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: d7126d5bc472f44af9320ffb1133d70f, type: 3}
+        Clip: {fileID: 8300000, guid: ac55c7334b27a47cc9f9547f4bd9c9a5, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -382,7 +281,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Tooltip_PopUp
+    - Name: TowerTopSpinner
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -394,7 +293,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 314a825c8efb1904ebc253f8222caf14, type: 3}
+        Clip: {fileID: 8300000, guid: cc9e4eb39b43847d5bdfd78495493738, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -407,7 +306,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Tooltip_FadeAway
+    - Name: WaterFilling
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -419,7 +318,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: f10b446a12ffa8c4bb4bf740c3788470, type: 3}
+        Clip: {fileID: 8300000, guid: 0177659a691084341b918558f41c0a8a, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -432,7 +331,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Menu_Services_Buy
+    - Name: PowerUps
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -444,7 +343,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: cb31aa10a6b729f428e7df0fc4b8abd5, type: 3}
+        Clip: {fileID: 8300000, guid: 080d8724c231e46a78f44c731397df3f, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -457,7 +356,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Game_Startup
+    - Name: ObjectFloatUp
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -469,7 +368,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 7ae8185926f0c0c468dc0ca5a0b062e7, type: 3}
+        Clip: {fileID: 8300000, guid: c9fd706d03274444e983a653c423b34e, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -482,7 +381,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: MenuTab_ColonyName_Hover_Option1
+    - Name: PlantsGrowing
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -494,7 +393,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 92a0ac3f6fde54a4480da87338205b29, type: 3}
+        Clip: {fileID: 8300000, guid: e46320f7ae42b42d9a5860bba1a9085e, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -507,7 +406,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: MenuTab_ColonyName_Hover_Option2
+    - Name: FireIgnites
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -519,7 +418,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: ef3d5bf3204cbe04d858da7d9658a76b, type: 3}
+        Clip: {fileID: 8300000, guid: daa958b33567e4fc2876536782ebc3c5, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -532,7 +431,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Planet_BuildCity_Selection
+    - Name: PickUpGem
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -544,7 +443,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: e0e45abfd58a962479f5a19ee58e6017, type: 3}
+        Clip: {fileID: 8300000, guid: adf07d715a540444d94fabece368e011, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -557,7 +456,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: Convoy_ExecuteConvoy_Selection
+    - Name: Wind
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -569,7 +468,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 05b2d37e6915f1441b1a8edb6cb0aa4d, type: 3}
+        Clip: {fileID: 8300000, guid: d669028355c484d6d81875174dd86177, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -582,7 +481,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: MenuTab_Services_Out
+    - Name: MovingThroughWate
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -594,7 +493,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 24db58b225203e944a760465c221dd4b, type: 3}
+        Clip: {fileID: 8300000, guid: 4f343a58a80874c9583efcb1f83fe667, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -607,7 +506,20 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: MenuTab_Military_SpaceSupport_Select_option2
+    _volume: 1
+  - Name: Music
+    AudioObjectPrefab: {fileID: 100000, guid: 0c1c735ac5b98ad428f564386ebb50c9, type: 2}
+    AudioItems:
+    - Name: ???
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems: []
+    - Name: VRitfact_AmbientMusic
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -619,7 +531,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: bba101af44f9a4d45a0bae02d5012620, type: 3}
+        Clip: {fileID: 8300000, guid: ed55eb71507495b42afb69d003806644, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -632,574 +544,21 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: MenuTab_ColonyName_In
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: f1b35d9a86524b448adb6143af93d5c4, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: MenuTab_VaultofApollo_FadeIn
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 1776ec6381064574bb7d1b30a594c802, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Combat_SpaceSupport_FlyBy
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 44f631bffa6486346bd18d7775c7ef34, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: MenuTab_Military_StellarMarines_Select
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 8e846049a8271fd4b8c9152d59033f88, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Convoy_TestConvoy_Selection
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 1104da6f7498fe945a928bbd7aa510d5, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Combat_SpaceSupport_Sonar_3pings
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 49a54a53ea2273844b16eae92e80cfd3, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: CityState_Power_LeaseShips
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 826e43ada8d74e544a53ed50abefe2dc, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: MenuTab_Services_In
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: f3a42f2c9b5059f4381521a860e58fdc, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Zoomin_Planet
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: aa4552fbd5c0b854bbbf3ccd75048cce, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: MenuRab_Military_MissileRecon_Select
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 0e9d860bc475bbe4987fc8cb18ee1b80, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Tooltip_Error_PopUp
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 9ef2064e9f5cb0c48a4ab84cc8d0f8bc, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: MenuTab_ColonyName_Select
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: ad00b6c9643300546b837b72fa68a781, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: MenuTab_VaultofApollo_FadeOut
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: e877abf505c753a468a88e0fa59d950e, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: MenuTab_Contracts_Select
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: b6ec9262e9aaf4a41ae792cc55fc3f5c, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: CityState_Power_Rehabilitate
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 18b5a9bb4b7bba4429f873e9db580917, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Main_Menu_Select
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 58e4dca63f932674cb46c0ea63a5925d, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Combat_SpaceSupport_Sonar_2pings
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 965767428fa07a94980c432786ab3adf, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: MenuTab_Military_SpaceSupport_Select_option1
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: ffbc324def1ea4f4ba6f07deb56b2661, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Convoy_ResourceBuy_Confirmation_Selection
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: b443f77c1811f5b448db3dc585fde949, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Convoy_UndoMove_Selection
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: fad55f53be2acb94db6984e096f582fe, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Combat_MissileRecon_Salvo
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 3871ea5874746904a984dd2b8d614775, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: MenuTab_ColonyName_Confirm
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: fce95c29e5b9d6c48b269906f9871dd8, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    _volume: .75
+    _volume: 1
   musicPlaylist: []
-  loopPlaylist: 1
+  loopPlaylist: 0
   shufflePlaylist: 0
   crossfadePlaylist: 0
-  delayBetweenPlaylistTracks: 0
+  delayBetweenPlaylistTracks: 1
   _audioDisabled: 0
   _volume: 1
   _currentInspectorSelection:
     currentCategoryIndex: 0
-    currentItemIndex: -1
-    currentSubitemIndex: -1
+    currentItemIndex: 2
+    currentSubitemIndex: 0
     currentPlaylistIndex: 0
   lastAmbientTime: 0
   ambientEventTimeThreshold: 0
---- !u!1002 &11400001
-EditorExtensionImpl:
-  serializedVersion: 6
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

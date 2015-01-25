@@ -24,7 +24,7 @@ public class GestureManager : MonoBehaviour
 
     void Start()
     {
-        
+        AudioController.Play("VRitfact_AmbientMusic");
     }
 
     void OnTriggerEnter(Collider other)
@@ -49,7 +49,8 @@ public class GestureManager : MonoBehaviour
             _lastPose = thalmicMyo.pose;
 
             // Drop gesture
-            if (thalmicMyo.pose == Pose.FingersSpread) {
+            if (thalmicMyo.pose == Pose.FingersSpread || (Input.GetKeyDown(KeyCode.H) && isHoldingObj))
+            {
                 print("Pose Recognized: Fingers Spread");
                 if (isHoldingObj)
                 {
@@ -59,7 +60,7 @@ public class GestureManager : MonoBehaviour
             }
 
             // Pick up gesture
-            if (thalmicMyo.pose == Pose.Fist)
+            if (thalmicMyo.pose == Pose.Fist || (Input.GetKeyDown(KeyCode.H) && !isHoldingObj))
             {
                 // Pick up object
                 ExtendUnlockAndNotifyUserAction(thalmicMyo);
@@ -144,6 +145,8 @@ public class GestureManager : MonoBehaviour
         _heldObject = targetObject;
         _heldObject.rigidbody.isKinematic = true;
 
+        AudioController.Play("BallPickUp");
+
         print("We picked up an object");
     }
 
@@ -154,6 +157,8 @@ public class GestureManager : MonoBehaviour
         _heldObject.rigidbody.isKinematic = false;
 		_heldObject.transform.localScale = Vector3.one;
         _heldObject = null;
+
+        AudioController.Play("BallPlaceDown");
 
         print("Object dropped");
 
