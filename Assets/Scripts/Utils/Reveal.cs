@@ -59,4 +59,8 @@ public class Reveal : MonoBehaviour {
 	{
 		return new Vector3(); //dummy - remove before flight
 	}
+
+	public void Play() {
+		this.is_active = true;
+	}
 }
