@@ -21,7 +21,9 @@ public class Reveal : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_movementFactor = (float) MovementSpeed * LERP_TRANSLATION_FACTOR;
-		_targetLocation = new Vector3(FinalLocation.x, FinalLocation.y, FinalLocation.z);
+		_targetLocation = new Vector3(transform.parent.transform.position.x + FinalLocation.x, 
+            transform.parent.transform.position.y + FinalLocation.y, 
+            transform.parent.transform.position.z + FinalLocation.z);
 	}
 	
 	// Update is called once per frame
@@ -31,9 +33,9 @@ public class Reveal : MonoBehaviour {
 		if (transform.position == FinalLocation)  //no more movement
 			return;
 
-		newX = Mathf.Lerp(transform.position.x, _targetLocation.x, Time.deltaTime * _movementFactor);
-		newY = Mathf.Lerp(transform.position.y, _targetLocation.y, Time.deltaTime * _movementFactor);
-		newZ = Mathf.Lerp(transform.position.z, _targetLocation.z, Time.deltaTime * _movementFactor);
+        newX = Mathf.Lerp(transform.position.x, _targetLocation.x, Time.deltaTime * _movementFactor);
+        newY = Mathf.Lerp(transform.position.y, _targetLocation.y, Time.deltaTime * _movementFactor);
+        newZ = Mathf.Lerp(transform.position.z, _targetLocation.z, Time.deltaTime * _movementFactor);
 		transform.position = updatePosition(newX, newY, newZ);
 	}
 
