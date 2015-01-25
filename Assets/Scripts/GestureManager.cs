@@ -10,7 +10,7 @@ using VibrationType = Thalmic.Myo.VibrationType;
 // Compensate for initial yaw (orientation about the gravity vector) and roll (orientation about
 // the wearer's arm) by allowing the user to set a reference orientation.
 // Making the fingers spread pose or pressing the 'r' key resets the reference orientation.
-public class JointOrientation : MonoBehaviour
+public class GestureManager : MonoBehaviour
 {
     // Myo game object to connect with.
     // This object must have a ThalmicMyo script attached.
