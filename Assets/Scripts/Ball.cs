@@ -54,6 +54,7 @@ public class Ball : MonoBehaviour
 		if (other.tag == "gem") {
 			other.transform.parent = this.transform;
 			other.transform.localPosition = Vector3.zero;
+			other.transform.localScale = new Vector3(0.39f, 0.39f, 0.39f);
 		}
 		if (other.tag == "pedestal") {
 			PlaceBall();
