@@ -8,7 +8,7 @@
     {
    
         Tags {"Queue"="Transparent"}
-        ZWrite Off
+        ZWrite On
         Blend SrcAlpha OneMinusSrcAlpha
  
         Subshader
