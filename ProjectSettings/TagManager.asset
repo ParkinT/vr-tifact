@@ -7,6 +7,7 @@ TagManager:
   - GUI
   - gem
   - pedestal
+  - ball
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
