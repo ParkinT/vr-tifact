@@ -56,31 +56,6 @@ MonoBehaviour:
   - Name: SFX
     AudioObjectPrefab: {fileID: 100000, guid: 0c1c735ac5b98ad428f564386ebb50c9, type: 2}
     AudioItems:
-    - Name: BallPickUp
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: ce5135bb14d7c4fbf89998a9969167c4, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
     - Name: BallPlaceDown
       Loop: 0
       DestroyOnLoad: 1
@@ -94,131 +69,6 @@ MonoBehaviour:
         Probability: 1
         ItemModeAudioID: 
         Clip: {fileID: 8300000, guid: 18d32c90155154b6e8b522f87a8e1389, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: Footsteps
-      Loop: 1
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 3
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: a7d40b42c34b74304853944afeeca65f, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: FireBurning
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: cd65975e8c80047ed93379730a99488c, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: BuildingsRumble
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: f4d0ad5b87271439595aca447d0692a5, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: WaterSitting
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 19adbaa969ba74b2082a68a3e5d6aa6d, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: SlotPlacement
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 15efc4be25c564947a1a5666fb81e9f7, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -281,7 +131,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: TowerTopSpinner
+    - Name: SlotPlacement
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -293,82 +143,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: cc9e4eb39b43847d5bdfd78495493738, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: WaterFilling
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 0177659a691084341b918558f41c0a8a, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: PowerUps
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 080d8724c231e46a78f44c731397df3f, type: 3}
-        Volume: 1
-        PitchShift: 0
-        Pan2D: 0
-        Delay: 0
-        RandomPitch: 0
-        RandomVolume: 0
-        RandomDelay: 0
-        ClipStopTime: 0
-        ClipStartTime: 0
-        FadeIn: 0
-        FadeOut: 0
-        RandomStartPosition: 0
-    - Name: ObjectFloatUp
-      Loop: 0
-      DestroyOnLoad: 1
-      Volume: 1
-      SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
-      MaxInstanceCount: 0
-      Delay: 0
-      subItems:
-      - SubItemType: 0
-        Probability: 1
-        ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: c9fd706d03274444e983a653c423b34e, type: 3}
+        Clip: {fileID: 8300000, guid: 15efc4be25c564947a1a5666fb81e9f7, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -406,7 +181,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: FireIgnites
+    - Name: BuildingsRumble
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -418,7 +193,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: daa958b33567e4fc2876536782ebc3c5, type: 3}
+        Clip: {fileID: 8300000, guid: f4d0ad5b87271439595aca447d0692a5, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -456,6 +231,231 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
+    - Name: TowerTopSpinner
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems:
+      - SubItemType: 0
+        Probability: 1
+        ItemModeAudioID: 
+        Clip: {fileID: 8300000, guid: cc9e4eb39b43847d5bdfd78495493738, type: 3}
+        Volume: 1
+        PitchShift: 0
+        Pan2D: 0
+        Delay: 0
+        RandomPitch: 0
+        RandomVolume: 0
+        RandomDelay: 0
+        ClipStopTime: 0
+        ClipStartTime: 0
+        FadeIn: 0
+        FadeOut: 0
+        RandomStartPosition: 0
+    - Name: Footsteps
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems:
+      - SubItemType: 0
+        Probability: 1
+        ItemModeAudioID: 
+        Clip: {fileID: 8300000, guid: a7d40b42c34b74304853944afeeca65f, type: 3}
+        Volume: 1
+        PitchShift: 0
+        Pan2D: 0
+        Delay: 0
+        RandomPitch: 0
+        RandomVolume: 0
+        RandomDelay: 0
+        ClipStopTime: 0
+        ClipStartTime: 0
+        FadeIn: 0
+        FadeOut: 0
+        RandomStartPosition: 0
+    - Name: FireIgnites
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems:
+      - SubItemType: 0
+        Probability: 1
+        ItemModeAudioID: 
+        Clip: {fileID: 8300000, guid: daa958b33567e4fc2876536782ebc3c5, type: 3}
+        Volume: 1
+        PitchShift: 0
+        Pan2D: 0
+        Delay: 0
+        RandomPitch: 0
+        RandomVolume: 0
+        RandomDelay: 0
+        ClipStopTime: 0
+        ClipStartTime: 0
+        FadeIn: 0
+        FadeOut: 0
+        RandomStartPosition: 0
+    - Name: ObjectFloatUp
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems:
+      - SubItemType: 0
+        Probability: 1
+        ItemModeAudioID: 
+        Clip: {fileID: 8300000, guid: c9fd706d03274444e983a653c423b34e, type: 3}
+        Volume: 1
+        PitchShift: 0
+        Pan2D: 0
+        Delay: 0
+        RandomPitch: 0
+        RandomVolume: 0
+        RandomDelay: 0
+        ClipStopTime: 0
+        ClipStartTime: 0
+        FadeIn: 0
+        FadeOut: 0
+        RandomStartPosition: 0
+    - Name: FireBurning
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems:
+      - SubItemType: 0
+        Probability: 1
+        ItemModeAudioID: 
+        Clip: {fileID: 8300000, guid: cd65975e8c80047ed93379730a99488c, type: 3}
+        Volume: 1
+        PitchShift: 0
+        Pan2D: 0
+        Delay: 0
+        RandomPitch: 0
+        RandomVolume: 0
+        RandomDelay: 0
+        ClipStopTime: 0
+        ClipStartTime: 0
+        FadeIn: 0
+        FadeOut: 0
+        RandomStartPosition: 0
+    - Name: MovingThroughWater
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems:
+      - SubItemType: 0
+        Probability: 1
+        ItemModeAudioID: 
+        Clip: {fileID: 8300000, guid: 4f343a58a80874c9583efcb1f83fe667, type: 3}
+        Volume: 1
+        PitchShift: 0
+        Pan2D: 0
+        Delay: 0
+        RandomPitch: 0
+        RandomVolume: 0
+        RandomDelay: 0
+        ClipStopTime: 0
+        ClipStartTime: 0
+        FadeIn: 0
+        FadeOut: 0
+        RandomStartPosition: 0
+    - Name: PowerUp
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems:
+      - SubItemType: 0
+        Probability: 1
+        ItemModeAudioID: 
+        Clip: {fileID: 8300000, guid: 080d8724c231e46a78f44c731397df3f, type: 3}
+        Volume: 1
+        PitchShift: 0
+        Pan2D: 0
+        Delay: 0
+        RandomPitch: 0
+        RandomVolume: 0
+        RandomDelay: 0
+        ClipStopTime: 0
+        ClipStartTime: 0
+        FadeIn: 0
+        FadeOut: 0
+        RandomStartPosition: 0
+    - Name: WaterFilling
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems:
+      - SubItemType: 0
+        Probability: 1
+        ItemModeAudioID: 
+        Clip: {fileID: 8300000, guid: 0177659a691084341b918558f41c0a8a, type: 3}
+        Volume: 1
+        PitchShift: 0
+        Pan2D: 0
+        Delay: 0
+        RandomPitch: 0
+        RandomVolume: 0
+        RandomDelay: 0
+        ClipStopTime: 0
+        ClipStartTime: 0
+        FadeIn: 0
+        FadeOut: 0
+        RandomStartPosition: 0
+    - Name: WaterSitting
+      Loop: 0
+      DestroyOnLoad: 1
+      Volume: 1
+      SubItemPickMode: 2
+      MinTimeBetweenPlayCalls: .100000001
+      MaxInstanceCount: 0
+      Delay: 0
+      subItems:
+      - SubItemType: 0
+        Probability: 1
+        ItemModeAudioID: 
+        Clip: {fileID: 8300000, guid: 19adbaa969ba74b2082a68a3e5d6aa6d, type: 3}
+        Volume: 1
+        PitchShift: 0
+        Pan2D: 0
+        Delay: 0
+        RandomPitch: 0
+        RandomVolume: 0
+        RandomDelay: 0
+        ClipStopTime: 0
+        ClipStartTime: 0
+        FadeIn: 0
+        FadeOut: 0
+        RandomStartPosition: 0
     - Name: Wind
       Loop: 0
       DestroyOnLoad: 1
@@ -481,7 +481,7 @@ MonoBehaviour:
         FadeIn: 0
         FadeOut: 0
         RandomStartPosition: 0
-    - Name: MovingThroughWate
+    - Name: BallPickUp
       Loop: 0
       DestroyOnLoad: 1
       Volume: 1
@@ -493,7 +493,7 @@ MonoBehaviour:
       - SubItemType: 0
         Probability: 1
         ItemModeAudioID: 
-        Clip: {fileID: 8300000, guid: 4f343a58a80874c9583efcb1f83fe667, type: 3}
+        Clip: {fileID: 8300000, guid: ce5135bb14d7c4fbf89998a9969167c4, type: 3}
         Volume: 1
         PitchShift: 0
         Pan2D: 0
@@ -554,7 +554,7 @@ MonoBehaviour:
   _volume: 1
   _currentInspectorSelection:
     currentCategoryIndex: 0
-    currentItemIndex: 2
+    currentItemIndex: 0
     currentSubitemIndex: 0
     currentPlaylistIndex: 0
   lastAmbientTime: 0
