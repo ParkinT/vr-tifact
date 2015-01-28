@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 using LockingPolicy = Thalmic.Myo.LockingPolicy;
 using Pose = Thalmic.Myo.Pose;
@@ -22,17 +23,20 @@ public class GestureManager : MonoBehaviour
     private GameObject _heldObject = null;
     private bool readyForPickup = false;
 
+	private ColliderCollector colliderCollector = null;
+
     void Start()
     {
-        AudioController.Play("VRitfact_AmbientMusic");
-    }
-
-    void OnTriggerEnter(Collider other)
+		AudioController.Play("VRitfact_AmbientMusic");
+		this.colliderCollector = this.GetComponent<ColliderCollector>();
+	}
+	
+	void OnTriggerEnter(Collider other)
     {
         readyForPickup = true;
     }
 
-    void OnTriggerLeave(Collider other)
+    void OnTriggerExit(Collider other)
     {
         readyForPickup = false;
     }
@@ -49,18 +53,15 @@ public class GestureManager : MonoBehaviour
             _lastPose = thalmicMyo.pose;
 
             // Drop gesture
-            if (thalmicMyo.pose == Pose.FingersSpread || (Input.GetKeyDown(KeyCode.H) && isHoldingObj))
+            if ((thalmicMyo.pose == Pose.FingersSpread || Input.GetKeyDown(KeyCode.H)) && isHoldingObj)
             {
                 print("Pose Recognized: Fingers Spread");
-                if (isHoldingObj)
-                {
-                    dropObject();
-                }
+            	dropObject();
                 ExtendUnlockAndNotifyUserAction(thalmicMyo);
             }
 
             // Pick up gesture
-            if (thalmicMyo.pose == Pose.Fist || (Input.GetKeyDown(KeyCode.H) && !isHoldingObj))
+			if ((thalmicMyo.pose == Pose.Fist || Input.GetKeyDown(KeyCode.H)) && !isHoldingObj)
             {
                 // Pick up object
                 ExtendUnlockAndNotifyUserAction(thalmicMyo);
@@ -68,7 +69,18 @@ public class GestureManager : MonoBehaviour
 
                 if (!isHoldingObj && readyForPickup)
                 {
-                    pickupObject(GameObject.Find("Ball"));
+					GameObject pickup = null;
+					foreach(Collider c in this.colliderCollector.managedColliders) {
+						if(c.tag.Equals("ball")) { 
+							pickup = c.gameObject;
+							break;
+						}
+						else if (c.tag.Equals("gem")) {
+							pickup = c.gameObject;
+						}
+					}
+					if(null != pickup)
+                    	pickupObject(pickup);
                 }
             }
 
@@ -138,7 +150,7 @@ public class GestureManager : MonoBehaviour
         isHoldingObj = true;
 
         _heldObject = targetObject;
-        _heldObject.rigidbody.isKinematic = true;
+        //_heldObject.rigidbody.isKinematic = true;
 
         AudioController.Play("BallPickUp");
 
