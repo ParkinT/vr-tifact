@@ -10188,6 +10188,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 11406026, guid: ec999f72f6204364aabb6d24a13dfd4c, type: 2}
+      propertyPath: _currentInspectorSelection.currentItemIndex
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406026, guid: ec999f72f6204364aabb6d24a13dfd4c, type: 2}
+      propertyPath: AudioCategories.Array.data[0].AudioItems.Array.data[8].Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406026, guid: ec999f72f6204364aabb6d24a13dfd4c, type: 2}
+      propertyPath: AudioCategories.Array.data[0].AudioItems.Array.data[8].MinTimeBetweenPlayCalls
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec999f72f6204364aabb6d24a13dfd4c, type: 2}
   m_RootGameObject: {fileID: 415062974}
@@ -10549,11 +10561,11 @@ MonoBehaviour:
         FadeOut: 0
         RandomStartPosition: 0
     - Name: Footsteps
-      Loop: 0
+      Loop: 1
       DestroyOnLoad: 1
       Volume: 1
       SubItemPickMode: 2
-      MinTimeBetweenPlayCalls: .100000001
+      MinTimeBetweenPlayCalls: 0
       MaxInstanceCount: 0
       Delay: 0
       subItems:
@@ -10846,7 +10858,7 @@ MonoBehaviour:
   _volume: 1
   _currentInspectorSelection:
     currentCategoryIndex: 0
-    currentItemIndex: 0
+    currentItemIndex: 8
     currentSubitemIndex: 0
     currentPlaylistIndex: 0
   lastAmbientTime: 0
@@ -15163,7 +15175,7 @@ Transform:
   m_LocalScale: {x: .393700778, y: .393700778, z: .393700778}
   m_Children: []
   m_Father: {fileID: 1643723265}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!23 &567711455
 Renderer:
   m_ObjectHideFlags: 0
@@ -15280,7 +15292,7 @@ Transform:
   m_LocalScale: {x: .393700778, y: .393700778, z: .393700778}
   m_Children: []
   m_Father: {fileID: 1643723265}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!64 &572414630
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25321,6 +25333,7 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &940742884
 Transform:
@@ -46896,8 +46909,8 @@ Transform:
   - {fileID: 1528097419}
   - {fileID: 722621332}
   - {fileID: 1949212692}
-  - {fileID: 572414629}
   - {fileID: 567711454}
+  - {fileID: 572414629}
   - {fileID: 2102309192}
   m_Father: {fileID: 1874164005}
   m_RootOrder: 0
@@ -51236,6 +51249,7 @@ GameObject:
   - 114: {fileID: 1800638970}
   - 114: {fileID: 1800638969}
   - 114: {fileID: 1800638968}
+  - 114: {fileID: 1800638972}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -51359,6 +51373,17 @@ CharacterController:
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1800638972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1800638966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f407dcfbb2778c84191f83cf882a6fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1802849532
 GameObject:
   m_ObjectHideFlags: 0
@@ -58810,6 +58835,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2076131656
 Renderer:
   m_ObjectHideFlags: 0

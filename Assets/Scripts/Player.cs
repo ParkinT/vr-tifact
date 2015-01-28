@@ -12,18 +12,34 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-	    if (!isAudioPlaying && 
-            (Input.GetKeyDown(KeyCode.W)/* || Input.GetKeyDown(KeyCode.A) || 
-            Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)*/))
+        // Handle footstep audio
+        if (IsMoving() && !isAudioPlaying)
         {
-            isAudioPlaying = true;
-            AudioController.Play("Footsteps");
+            StartFootstepAudio();
         }
-        else if (Input.GetKeyUp(KeyCode.W) /*&& Input.GetKeyUp(KeyCode.A) && 
-            Input.GetKeyUp(KeyCode.S) && Input.GetKeyUp(KeyCode.D)*/)
+        else if (!IsMoving() && isAudioPlaying)
         {
-            isAudioPlaying = false;
-            AudioController.Stop("Footsteps");
+            StopFootstepAudio();
         }
 	}
+
+    private void StartFootstepAudio()
+    {
+        isAudioPlaying = true;
+        AudioController.Play("Footsteps");
+    }
+
+    private void StopFootstepAudio()
+    {
+        isAudioPlaying = false;
+        AudioController.Stop("Footsteps");
+    }
+
+    public bool IsMoving()
+    {
+        if (GetComponent<CharacterController>().velocity == Vector3.zero)
+            return false;
+        else
+            return true;
+    }
 }
