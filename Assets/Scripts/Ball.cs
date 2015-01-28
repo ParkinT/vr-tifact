@@ -1,63 +1,90 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ball : MonoBehaviour
+public class Ball : Carryable
 {
-    private bool ballAnimationStarted = false;
-    private bool inPedestal = false;
-    private GameObject pedestal;
-    private Vector3 targetLocation = Vector3.zero;
-    private const float MOVEMENT_SPEED = 0.5f;
-    float xPos, yPos, zPos = 0;
-
-	bool bShouldUpdate = false;
-
-	// Use this for initialization
-	void Start () 
-    {
-		pedestal = GameObject.Find("BallSitPos");
-		targetLocation = pedestal.transform.position;
-//        targetLocation = new Vector3(pedestal.gameObject.transform.position.x, 
-//            pedestal.gameObject.transform.position.y + (pedestal.renderer.bounds.size.y / 2) + 
-//            (renderer.bounds.size.y / 2), pedestal.gameObject.transform.position.z);
-	}
+	[SerializeField]
+	private Transform earthTransform;
+	[SerializeField]
+	private Transform waterTransform;
+	[SerializeField]
+	private Transform fireTransform;
+	[SerializeField]
+	private Transform windTransform;
 	
-	// Update is called once per frame
-	void Update () 
-    {
-	}
+	[SerializeField]
+	private Reveal[] earthGemReveals;
+	[SerializeField]
+	private Reveal[] waterGemReveals;
+	[SerializeField]
+	private Reveal[] fireGemReveals;
+	[SerializeField]
+	private Reveal[] windGemReveals;
 
-    IEnumerator AnimatePlacement ()
-    {
-        // Move the ball toward an object until it reaches the desired position
-        while (transform.position.x != targetLocation.x || 
-            transform.position.y != targetLocation.y || 
-            transform.position.z != targetLocation.z) 
-        {
-            xPos = Mathf.Lerp(transform.position.x, targetLocation.x, Time.deltaTime * MOVEMENT_SPEED);
-            yPos = Mathf.Lerp(transform.position.y, targetLocation.y, Time.deltaTime * MOVEMENT_SPEED);
-            zPos = Mathf.Lerp(transform.position.z, targetLocation.z, Time.deltaTime * MOVEMENT_SPEED);
-            transform.position = new Vector3(xPos, yPos, zPos);
-            yield return null;
-        }
-        inPedestal = true;
-    }
-
-    void PlaceBall()
-    {
-        // Place the ball on the pedestal
-        gameObject.rigidbody.isKinematic = true;
-        StartCoroutine(AnimatePlacement());
-    }
+	public override void Dropped ()
+	{
+		base.Dropped ();
+		AudioController.Play("BallPlaceDown");
+	} 
 
 	public void OnTriggerEnter(Collider other) {
 		if (other.tag == "gem") {
-			other.transform.parent = this.transform;
+			Transform newParent = this.transform;
+			int revealID = -1;
+			switch(other.name) {
+			case "earth":
+				newParent = earthTransform;
+				revealID = 0;
+				break;
+			case "water":
+				newParent = waterTransform;
+				revealID = 1;
+				break;
+			case "fire":
+				newParent = fireTransform;
+				revealID = 2;
+				break;
+			case "wind":
+				newParent = windTransform;
+				revealID = 3;
+				break;
+			}
+			other.transform.parent = newParent;
 			other.transform.localPosition = Vector3.zero;
-			other.transform.localScale = new Vector3(0.39f, 0.39f, 0.39f);
+			other.transform.localScale = Vector3.one;
+			other.transform.localRotation = Quaternion.identity;
+			other.enabled = false;
+			this.RunReveal(revealID);
+			
+			Carryable carryable = other.GetComponent<Carryable>();
+			if(carryable != null) {
+				carryable.ForceDrop();
+				carryable.bCanBeCarried = false;
+			}
 		}
-		if (other.tag == "pedestal") {
-			PlaceBall();
+	}
+	
+	public void RunReveal(int revealID) {
+		Reveal[] toReveal;
+		switch (revealID) {
+		case 0:
+			toReveal = earthGemReveals;
+			break;
+		case 1:
+			toReveal = waterGemReveals;
+			break;
+		case 2:
+			toReveal = fireGemReveals;
+			break;
+		case 3:
+			toReveal = windGemReveals;
+			break;
+		default:
+			Debug.LogError("Reveal ID not a proper id.");
+			return;
+		}
+		for (int i = 0; i < toReveal.Length; ++i) {
+			toReveal[i].Play();
 		}
 	}
 }

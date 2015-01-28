@@ -4,53 +4,31 @@ using System.Collections;
 public class Pedestal : MonoBehaviour {
 
 	[SerializeField]
-	private Reveal[] earthGemReveals;
+	private Transform ballSitPosition = null;
 	[SerializeField]
-	private Reveal[] waterGemReveals;
-	[SerializeField]
-	private Reveal[] fireGemReveals;
-	[SerializeField]
-	private Reveal[] windGemReveals;
+	private float moveSpeed = 0.5f;
 
-	public void RunReveal(int revealID) {
-		Reveal[] toReveal;
-		switch (revealID) {
-		case 0:
-			toReveal = earthGemReveals;
-			break;
-		case 1:
-			toReveal = waterGemReveals;
-			break;
-		case 2:
-			toReveal = fireGemReveals;
-			break;
-		case 3:
-			toReveal = windGemReveals;
-			break;
-		default:
-			Debug.LogError("Reveal ID not a proper id.");
-			return;
-		}
-		for (int i = 0; i < toReveal.Length; ++i) {
-			toReveal[i].Play();
+	IEnumerator AnimatePlacement (GameObject movingObject)
+	{
+		// Move the ball toward an object until it reaches the desired position
+		while (movingObject.transform.position != ballSitPosition.position) 
+		{
+			movingObject.transform.position = Vector3.Lerp(movingObject.transform.position, ballSitPosition.position, Time.deltaTime * moveSpeed);
+			yield return null;
 		}
 	}
 
-	void OnTriggerEnter(Collider other) {
-		Debug.Log (other.name);
-		switch (other.name) {
-		case "earth":
-			this.RunReveal(0);
-			break;
-		case "water":
-			this.RunReveal(1);
-			break;
-		case "fire":
-			this.RunReveal(2);
-			break;
-		case "wind":
-			this.RunReveal(3);
-			break;
+	public void OnTriggerEnter(Collider other) {
+		if (other.tag == "ball") {
+			
+			Carryable carryable = other.GetComponent<Carryable>();
+			if(carryable != null) {
+				Debug.Log("Ball at pedestal");
+				carryable.ForceDrop();
+				carryable.bCanBeCarried = false;
+			}
+
+			StartCoroutine(AnimatePlacement(other.gameObject));
 		}
 	}
 }
