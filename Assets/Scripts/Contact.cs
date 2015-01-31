@@ -13,8 +13,4 @@ public class Contact : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(string.Format("Yo, {0}", other.gameObject.name));
-    }
 }

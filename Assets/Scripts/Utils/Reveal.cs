@@ -27,7 +27,7 @@ public class Reveal : MonoBehaviour {
             transform.parent.transform.position.z + FinalLocation.z);
 		} else {
 			_targetLocation = new Vector3 (FinalLocation.x, FinalLocation.y, FinalLocation.z);
-				}
+		}
 	}
 	
 	// Update is called once per frame
