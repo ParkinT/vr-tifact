@@ -10,7 +10,7 @@ PlayerSettings:
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Global Game Jam 2015
   productName: vRtifact
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
