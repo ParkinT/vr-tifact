@@ -16,10 +16,10 @@ public class Gem : MonoBehaviour {
 		rotations[0] = new Quaternion(0, 0, 0.7f, 0.7f);    //earth gem
 		gems[1] = new Vector3(0.0009f, 0.09541f, 0.08574f); //water
 		rotations[1] = new Quaternion(-0.5f, -0.5f, 0.5f, 0.5f);  //water
-		gems[2] = new Vector3(-0.08877373f, 0.09849203f, 0.0004019737f);  //fire
-		rotations[2] = new Quaternion(0, 0, 0.7f, -0.7f);  //fire
-		gems[3] = new Vector3(0, 0.09804f, 0 ); //wind
-		rotations[3] = new Quaternion(0, 0, 0.7f, 0.7f); //wind
+		gems[2] = new Vector3(0, 0.1f, -0.1f);  //fire
+		rotations[2] = new Quaternion(0.5f, -0.5f, -0.5f, 0.5f);  //fire
+		gems[3] = new Vector3(-0.1f, 0.1f, 0); //wind
+		rotations[3] = new Quaternion(0f, 0f, 0.7f, -0.7f); //wind
 
 	}
 	
@@ -38,13 +38,13 @@ public class Gem : MonoBehaviour {
 					transform.localRotation = rotations[1];
 					break;
 				case "fire" :
-				Debug.Log(this.name + " : " + this.transform.localRotation);
+//				Debug.Log(this.name + " : " + this.transform.localRotation);
 					transform.localPosition = gems[2];
 					transform.localRotation = rotations[2];
 					break;
 				case "wind" :
-					transform.localPosition = gems[2];
-					transform.localRotation = rotations[2];
+					transform.localPosition = gems[3];
+					transform.localRotation = rotations[3];
 					break;
 			}
 		}

@@ -31,7 +31,6 @@ public class Pedestal : MonoBehaviour {
 			Debug.LogError("Reveal ID not a proper id.");
 			return;
 		}
-		Debug.Log (toReveal[0]);
 		for (int i = 0; i < toReveal.Length; ++i) {
 			toReveal[i].Play();
 		}
@@ -40,7 +39,6 @@ public class Pedestal : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		switch (other.gameObject.name) {
 		case "earth":
-			Debug.Log ("REVEALING " + other.gameObject.name);
 			this.RunReveal(0);
 			break;
 		case "water":

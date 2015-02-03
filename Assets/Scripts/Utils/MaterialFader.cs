@@ -24,7 +24,6 @@ public class MaterialFader : Reveal {
 	// Use this for initialization
 	void Start () {
 		this.is_active = false;
-
 		this.materialsToFade = this.objectRenderers.ConvertAll (r => r.material);
 		this.colorsOfMaterial = this.materialsToFade.ConvertAll(m => m.color);
 	}
@@ -37,6 +36,7 @@ public class MaterialFader : Reveal {
 				this.SetAlphas(0);
 				this.is_active = false;
 				this.gameObject.SetActive(false);
+				Debug.Log(percentComplete + " %");
 				return;
 			}
 			float applicableAlpha = 1.0f - percentComplete;
