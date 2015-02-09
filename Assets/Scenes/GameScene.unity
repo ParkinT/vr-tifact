@@ -138,7 +138,7 @@ MonoBehaviour:
   fireGemReveals:
   - {fileID: 840420650}
   windGemReveals:
-  - {fileID: 0}
+  - {fileID: 90398440}
 --- !u!54 &2434191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2783,6 +2783,7 @@ GameObject:
   - 114: {fileID: 90398437}
   - 114: {fileID: 90398436}
   - 114: {fileID: 90398435}
+  - 114: {fileID: 90398440}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -2899,13 +2900,27 @@ Transform:
   m_PrefabInternal: {fileID: 1798857475}
   m_GameObject: {fileID: 90398434}
   m_LocalRotation: {x: 0, y: -.144368649, z: 0, w: .989524007}
-  m_LocalPosition: {x: -22.5779991, y: .79549998, z: 2.29900002}
+  m_LocalPosition: {x: -22.5779991, y: 1.11609995, z: 2.29900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1187192948}
   - {fileID: 1557058738}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &90398440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 90398434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1456fa9e3560442589c6aca8c2fc3949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is_active: 0
+  FinalLocation: {x: -22.5779991, y: 90, z: 2.29900002}
+  MovementSpeed: 10
 --- !u!1 &90804465
 GameObject:
   m_ObjectHideFlags: 0
@@ -49045,7 +49060,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .79549998
+      value: 1.11609995
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_LocalPosition.z

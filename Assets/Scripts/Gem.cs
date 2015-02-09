@@ -38,7 +38,6 @@ public class Gem : MonoBehaviour {
 					transform.localRotation = rotations[1];
 					break;
 				case "fire" :
-//				Debug.Log(this.name + " : " + this.transform.localRotation);
 					transform.localPosition = gems[2];
 					transform.localRotation = rotations[2];
 					break;
